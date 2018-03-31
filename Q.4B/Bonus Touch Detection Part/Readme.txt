@@ -1,0 +1,1 @@
+Here, the only change we make is that we place the sensor at a diagonal of the area in which touch is to be detected and using multiplication by sin and cos of angles, x and y co-ordinate of object is calculated and printed at the screen.  

@@ -1,0 +1,62 @@
+According to our study of the problem, the two ciphers mentioned in the problem have a  characteristic difference in the character frequency distribution in the encrypted text.
+The english language follows certain character distributions in  general.For example ‘e’ is used maximum number of times(aroung 12.7%) in our speech or text followed by ‘t’ and  other characters in order.
+
+In simple substitution, the trend of frequency diatribution remains same with only difference being in the shuffled letters. That is, in encrypted text, some character would have a distribution of about 12.7% but that would not be ‘e’, but the trend of distribution would remain the same.
+
+In vignere cipher, this trend of distribution gets disturbed which was originally the purpose of this cipher.Here the frequencies of characters would even out for all 26 letters.
+
+So, as features we used the frequency distribution(all 26 characters) of encrypted texts in sorted order as the features of our model.
+
+
+
+------------------------------------------------------------------------------
+Performance and approaches
+
+The performances are:
+SVM :100%
+BPNN: 100%
+
+and on our self generated test data it was about :
+SVM: 100% or 99.75%
+BPNN: 98.75 to 100%
+
+
+Validation appraoches:
+Due to less data to train, we first decided to use leave one out cross validation so as to not lose any samples. 
+But afterwards we used random subsampling. But results were almost the same in each case, and we got about 98-100% accuracy in both the cases.
+
+Performance metrics:
+First, we used accuracy(correctly classified samples / total samples) as our performance metric. As our accuracy was quite good so, we didnt feel the need for using precision/recall method which is otherwise a better metric as it gives us a better idea our model and predictions(TP.TN,FP,FN) which can further help even analysis of out training data(Whether there were more samples of a particular type) and further different aspects.
+
+
+------------------------------------------------------------------------------
+Results on different parameters:
+
+SVM:
+1)Kernels
+linear: 96.5% accuracy
+rbf: 98.75-100% accuracy
+2)Max iterations:
+<5: 70-90% accuracy
+5-10: 90-96% accuracy
+>10 : 98 -100% accuracy
+
+BPNN:
+1)hidden layers:
+1-3: 42-48% accuracy
+3-5: 48-60% accuracy
+>5: >95% accuracy
+2)activation function:
+tanh: 48-50% (occasionaly 90%) accuracy
+relu: >97% accuracy
+logistic: 90-97% accuracy
+3)solver:
+lbfgs:95-99% accuracy
+sgd:60-90% accuracy
+adam:50-60% accuracy
+4)Learning rate:
+1e-5: >99% accuracy
+1e-4: 97-99% accuracy
+1e-3: <95% accuracy
+
+
