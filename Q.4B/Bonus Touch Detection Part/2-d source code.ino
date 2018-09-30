@@ -1,7 +1,7 @@
 #include <Servo.h>.
 #include <math.h>
 
-const float trigPin = 7;//Customisable
+const float trigPin = 7;//Customisable(acc. to pin config)
 const float echoPin = 6;//Change according to your configuration
 
 
