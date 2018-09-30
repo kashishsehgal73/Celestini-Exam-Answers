@@ -1,8 +1,8 @@
 #include <Servo.h>.
 #include <math.h>
 
-const float trigPin = 7;
-const float echoPin = 6;
+const float trigPin = 7;//Customisable
+const float echoPin = 6;//Change according to your configuration
 
 
 long duration;
