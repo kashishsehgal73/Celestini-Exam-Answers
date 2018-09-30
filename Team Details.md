@@ -1,4 +1,3 @@
-# Celestini-Exam-Answers
 Team Members:
 Kashish Sehgal(kashishsehgal73@gmail.com)
 Manasi Dogra
